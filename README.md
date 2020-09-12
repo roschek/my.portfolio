@@ -1,3 +1,4 @@
-# mesto
-проект для курса Yandex.practikum, технологии HTML, CSS, JS<br>
-<a href="https://roschek.github.io/mesto/">зайти на сайт</a>
+# portfolio
+
+сайт портфолио: технологии HTML, CSS, JS, Webpack<br>
+<a href="https://roschek.github.io/my.portfolio/">зайти на сайт</a>
