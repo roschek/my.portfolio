@@ -1,0 +1,41 @@
+.portfolio__list {
+    margin-bottom: 100px;
+}
+
+.technologies__item-portfolio {
+    display: block;
+    list-style: none;
+    max-width: 290px;
+    height: 200px;
+    box-shadow: 0 8px 10px 0.5px gray;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.technologies__item-portfolio:hover {
+    box-shadow: none;
+    transform: scale(1.2) !important;
+}
+
+.portfolio__item {
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.portfolio__item-milongero {
+    background-image: url("../images/don-milongero.jpg");
+}
+
+.portfolio__item-education {
+    background-image: url("../images/education.jpg");
+}
+
+.portfolio__item-travelling {
+    background-image: url("../images/travelling.jpg");
+}

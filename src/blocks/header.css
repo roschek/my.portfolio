@@ -1,0 +1,151 @@
+.header {
+    top: 0;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header__menu-list.active {
+    display: block;
+}
+
+.header__menu {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.header__menu-title {
+    font-family: "Do Hyeon", sans-serif;
+    color: white;
+    font-size: 32px;
+}
+
+.header__menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.header__menu-item {
+    color: white;
+    padding: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.header__menu-item a {
+    color: white;
+}
+
+.header__menu-item a:hover {
+    color: rgb(173, 173, 194);
+    transition: 0.4s;
+}
+
+.header__menu-contacts {
+    color: white;
+    transition: 0.4s;
+    letter-spacing: 2px;
+    display: block;
+}
+
+.header__contacts-title {
+    display: block;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.header__contacts-title:hover {
+    color: rgb(173, 173, 194);
+    text-decoration-line: underline;
+}
+
+.burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.burger__line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15px;
+    height: 0;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+.burger:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+.burger.bttn-active:before {
+    transform: rotate(45deg);
+    top: 14px;
+}
+
+.burger.bttn-active:after {
+    transform: rotate(-45deg);
+    bottom: 14px;
+}
+
+.burger.bttn-active>.burger__line {
+    transform: scale(0);
+    transition: 0.4s;
+}
+
+.burger:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    border: 1px solid white;
+    transition: 0.4s;
+}
+
+@media screen and (max-width: 900px) {
+    .header__menu-list {
+        position: absolute;
+        top: 60px;
+        background-color: grey;
+        left: 0;
+        max-width: 200px;
+        min-height: 100px;
+        flex-direction: column;
+        z-index: -10;
+        display: none;
+    }
+    .header__menu-contacts {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+    .header__menu-title {
+        font-size: 24px;
+    }
+}
