@@ -7,7 +7,46 @@ import Inputmask from "inputmask";
 const telMask = document.querySelector('#tel')
 Inputmask({ "mask": "+7 (999) 999-99-99" }).mask(telMask);
 
-//бургер меню
+
+//текст с эффектом появления
+
+const upperText = [
+    'Создание лендингов,\n',
+    'Посадочных страниц,\n',
+    'JavaScript'
+]
+
+function typeText() {
+    let line = 0;
+    let count = 0;
+    let outText = '';
+    let htmlOut = document.querySelector('.uppertext__text')
+
+    function typeLine() {
+        setTimeout(() => {
+            outText += upperText[line][count]
+            htmlOut.innerHTML = outText + '|';
+            count++;
+            if (count >= upperText[line].length) {
+                count = 0;
+                line++;
+                if (line == upperText.length) {
+
+                    line = 0;
+                    count = 0;
+                    outText = '';
+
+
+                }
+            }
+            typeLine()
+        }, 200)
+    }
+
+    typeLine()
+}
+typeText()
+    //бургер меню
 const burgerBttn = document.querySelector('.burger');
 const navMenu = document.querySelector('.header__menu-list')
 
@@ -56,9 +95,9 @@ AOS.init({
 
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 320, // offset (in px) from the original trigger point
-    delay: 50, // values from 0 to 3000, with step 50ms
-    duration: 2000, // values from 0 to 3000, with step 50ms
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 1, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
     easing: 'ease', // default easing for AOS animations
     once: false, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them

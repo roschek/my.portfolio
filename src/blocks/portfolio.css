@@ -1,5 +1,5 @@
 .portfolio__list {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .technologies__item-portfolio {
@@ -7,15 +7,15 @@
     list-style: none;
     max-width: 290px;
     height: 200px;
-    box-shadow: 0 8px 10px 0.5px gray;
+    box-shadow: 0 4px 10px 0.5px gray;
     margin: 20px;
     border-radius: 20px;
     transition: 0.3s;
 }
 
 .technologies__item-portfolio:hover {
-    box-shadow: none;
-    transform: scale(1.2) !important;
+    box-shadow: 0 2px 10px 0.5px gray;
+    transform: scale(1.1) !important;
 }
 
 .portfolio__item {
@@ -29,6 +29,8 @@
 }
 
 .portfolio__item-milongero {
+    background-size: contain;
+    background-repeat: no-repeat;
     background-image: url("../images/don-milongero.jpg");
 }
 
@@ -38,4 +40,10 @@
 
 .portfolio__item-travelling {
     background-image: url("../images/travelling.jpg");
+}
+
+.portfolio__item-game {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/2020-09-12_163255.jpg");
 }

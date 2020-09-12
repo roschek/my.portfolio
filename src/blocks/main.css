@@ -20,6 +20,7 @@
 }
 
 .main__header {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -43,17 +44,14 @@
     font-size: 64px;
     color: black;
     padding: 10px;
-    font-family: 'Russo One', sans-serif;
+    font-family: "Russo One", sans-serif;
     font-weight: bold;
     z-index: 10;
 }
 
 .main__subtitle {
-    font-family: 'Russo One', sans-serif;
-    font-weight: bold;
-    font-weight: 200;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 16px;
 }
 
 .arrow__down {
@@ -96,20 +94,40 @@
     animation: arrow 3s linear infinite -1.5s;
 }
 
-@media screen and (max-width:1110px) {
+.uppertext {
+    position: absolute;
+    top: 65%;
+    left: 35%;
+    max-width: 400px;
+}
+
+.uppertext__text {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+@media screen and (max-width: 1110px) {
+    .uppertext {
+        top: 65%;
+        left: 25%;
+    }
     .main__wrapper {
         padding-top: 30vh;
     }
 }
 
-@media screen and (max-width:756px) {
+@media screen and (max-width: 756px) {
+    .uppertext {
+        display: none;
+    }
     .main__wrapper {
         width: 100%;
         padding-top: 30vh;
     }
 }
 
-@media screen and (max-width:570px) {
+@media screen and (max-width: 570px) {
     .main__wrapper {
         padding-top: 30vh;
         width: 100%;
@@ -117,9 +135,14 @@
     .main__title {
         font-size: 32px;
     }
+    .uppertext {
+        top: 55%;
+        left: 15%;
+        width: 80%;
+    }
 }
 
-@media screen and (max-width:390px) {
+@media screen and (max-width: 390px) {
     .main__wrapper {
         padding-top: 30vh;
         width: 100%;

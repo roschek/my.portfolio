@@ -11,7 +11,7 @@
 
 .technologies__title {
     opacity: 0.8;
-    margin-top: 100px;
+    margin-top: 50px;
     text-align: center;
     font-family: "Russo One", sans-serif;
     font-weight: bold;
@@ -19,14 +19,13 @@
 }
 
 .technologies__subtitle {
-    font-family: "Russo One", sans-serif;
     font-size: 16px;
     font-weight: 400;
     display: block;
     max-width: 600px;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .technologies__list {
@@ -34,7 +33,7 @@
     grid-template-columns: repeat(auto-fit, 300px);
     list-style: none;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .technologies__item {
@@ -42,17 +41,11 @@
     display: block;
     list-style: none;
     max-width: 290px;
-    box-shadow: 0 8px 10px 0.5px gray;
+    box-shadow: 0 4px 10px 0.5px gray;
     margin: 20px;
     border-radius: 20px;
     transition: 0.3s;
     perspective: 1000px;
-}
-
-.technologies__item:hover {
-    transition: 1s !important;
-    box-shadow: none;
-    transform: translateY(25px) !important;
 }
 
 .technologies__icon {
@@ -62,9 +55,6 @@
     display: block;
     margin: 0 auto;
     padding-bottom: 20px;
-}
-
-.technologies__item:hover>.technologies__icon {
     animation: rotate 2s linear infinite;
 }
 

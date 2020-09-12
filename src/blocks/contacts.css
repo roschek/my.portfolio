@@ -34,15 +34,15 @@
 }
 
 .submit {
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
     max-width: 250px;
-    border: none;
     background-color: grey;
-    font-family: "Russo One", sans-serif;
-    font-weight: bold;
+    border: none;
+    color: white;
     letter-spacing: 2px;
     border-radius: 30px;
     cursor: pointer;
@@ -55,9 +55,16 @@ label {
 }
 
 .submit:hover {
-    transform: scale(1.1);
+    background-color: rgb(110, 110, 110);
 }
 
 .error {
     color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
